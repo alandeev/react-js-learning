@@ -1,0 +1,24 @@
+.tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  padding: 0 10px;
+  background: #aaa;
+  color: #000;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tasks .task:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
