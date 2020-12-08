@@ -63,7 +63,6 @@
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
-  margin: 5px 0;
 }
 
 .main .section .tasks li:hover{

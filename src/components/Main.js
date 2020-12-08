@@ -2,14 +2,8 @@ import React from 'react';
 // import { } from 'react-icons'
 import './Main.css';
 
-import { FaPlus, FaEdit, FaWindowClose } from 'react-icons/fa';
-
-// "eslintConfig": {
-//   "extends": [
-//     "react-app",
-//     "react-app/jest"
-//   ]
-// },
+import Header from './Header';
+import Section from './Section';
 
 class Main extends React.Component{
   constructor(props){
@@ -73,7 +67,7 @@ class Main extends React.Component{
   handleDeleteTask(task){
     const { tasks } = this.state;
     const new_tasks = tasks.filter(element => element !== task);
-  
+
     this.setState({
       tasks: new_tasks
     })
@@ -88,31 +82,11 @@ class Main extends React.Component{
 
   render(){
     const { tasks, text } = this.state;
-    
-    return  (
+
+    return (
       <div className="main">
-        <div className="header item">
-          <h1>Task List</h1>
-          <form onSubmit={this.handleSubmit} className="form">
-            <input type="text" onChange={this.handleChangeInput} value={text} />
-            <button type="submit"><FaPlus /></button>
-          </form>
-        </div>
-        <div className="section item">
-          <ul className="tasks">
-            {tasks.map((task) => (
-              <li key={task}>
-                <div>
-                  {task}
-                </div>
-                <div>
-                  <FaEdit className="edit" onClick={() => this.handleEditTask(task)} />
-                  <FaWindowClose className="delete" onClick={() => this.handleDeleteTask(task)} />
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Header handleSubmit={this.handleSubmit} handleChangeInput={this.handleChangeInput} text={text} />
+        <Section tasks={tasks} handleEditTask={this.handleEditTask} handleDeleteTask={this.handleDeleteTask} />
       </div>
     )
   }
