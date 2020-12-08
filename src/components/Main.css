@@ -1,0 +1,93 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main .item {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  background: #fff;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.main .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.main .header .form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main .header .form input[type="text"]{
+  border: 1px solid #ccc;
+  height: 40px;
+  width: 80%;
+}
+
+.main .header .form button[type="submit"]{
+  background: #f04c64;
+  color: #fff;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.main .section {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  padding: 20px;
+}
+
+.main .section .tasks {
+  width: 100%;
+  overflow-y: auto;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .section .tasks li{
+  transition: all 200ms;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  margin: 5px 0;
+}
+
+.main .section .tasks li:hover{
+  background: #51c5de;
+}
+
+.tasks li .edit {
+  transition: all 200ms;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #51c5de;
+}
+
+.tasks li .delete {
+  transition: all 200ms;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #f04c64;
+}
+
+.tasks li:hover .edit {
+  color: black;
+}
+
+.tasks li:hover .delete {
+  color: black;
+}
