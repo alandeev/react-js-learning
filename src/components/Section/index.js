@@ -12,8 +12,8 @@ export default function Section({ tasks, handleEditTask, handleDeleteTask }){
               {task}
             </div>
             <div>
-              <FaEdit className="edit" onClick={() => this.handleEditTask(task)} />
-              <FaWindowClose className="delete" onClick={() => this.handleDeleteTask(task)} />
+              <FaEdit className="edit" onClick={() => handleEditTask(task)} />
+              <FaWindowClose className="delete" onClick={() => handleDeleteTask(task)} />
             </div>
           </li>
         ))}
